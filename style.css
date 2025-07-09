@@ -288,6 +288,88 @@ section {
   transform: scale(1.2);
 }
 
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-about-left,
+.animate-about-right {
+  opacity: 0;
+}
+
+.animate-about-left.visible {
+  animation: slideInLeft 1s ease forwards;
+}
+
+.animate-about-right.visible {
+  animation: slideInRight 1s ease forwards;
+}
+
+
+#about {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  gap: 2rem;
+}
+
+.about-left, .about-right {
+  flex: 1;
+  min-width: 280px;
+}
+
+.about-photo {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--accent-color);
+  box-shadow: 0 0 20px rgba(0, 188, 212, 0.4);
+  animation: slideDown 1s ease-out forwards, float 3s ease-in-out infinite;
+  opacity: 0;
+  transition: box-shadow 0.3s ease;
+}
+
+.about-photo:hover {
+  box-shadow: 0 0 25px var(--accent-color), 0 0 40px var(--accent-color);
+}
+
+
+.about-right p {
+  font-size: 1rem;
+  color: var(--muted-color);
+  line-height: 1.8;
+  text-align: left;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+
 /* Skills Section */
 #skills .skills-grid {
   display: flex;

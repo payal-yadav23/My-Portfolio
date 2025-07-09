@@ -47,3 +47,21 @@ const skillObserver = new IntersectionObserver(entries => {
 skillCards.forEach(card => {
   skillObserver.observe(card);
 });
+
+
+  const aboutLeft = document.querySelector('.animate-about-left');
+  const aboutRight = document.querySelector('.animate-about-right');
+
+  const aboutObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        aboutObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  aboutObserver.observe(aboutLeft);
+  aboutObserver.observe(aboutRight);
+
+
