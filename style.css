@@ -196,6 +196,12 @@ section {
   margin-left: 5px;
 }
 
+#animated-text {
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+
 @keyframes blink {
   0%, 50%, 100% { opacity: 1; }
   25%, 75% { opacity: 0; }
@@ -234,7 +240,6 @@ section {
     transform: translateY(0);
   }
 }
-
 
 
 .btn-container {
@@ -647,4 +652,11 @@ footer {
   }
 }
 
-  
+  .message {
+  background-color: #e7ffe7;
+  border: 1px solid #2ecc71;
+  padding: 10px;
+  margin: 10px auto;
+  width: fit-content;
+  border-radius: 8px;
+}

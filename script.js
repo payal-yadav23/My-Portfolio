@@ -65,3 +65,22 @@ skillCards.forEach(card => {
   aboutObserver.observe(aboutRight);
 
 
+  function showMessage(event) {
+    event.preventDefault(); // Stop form from refreshing the page
+
+    const messageBox = document.getElementById("message-sent");
+    messageBox.style.display = "block";
+
+    // Optional: Hide the message after a few seconds
+    setTimeout(() => {
+      messageBox.style.display = "none";
+    }, 5000); // 5 seconds
+
+    // Optionally clear the form
+    event.target.reset();
+    
+    return false;
+  }
+
+
+

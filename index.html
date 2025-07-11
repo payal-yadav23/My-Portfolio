@@ -60,8 +60,8 @@
     I am a passionate Java and Web Developer with a strong foundation in backend systems and frontend development. I love building responsive, user-centric websites and continuously learning new technologies.
   </p>
   <div class="btn-container">
-    <button class="btn btn-color-1">Download CV</button>
-    <button class="btn btn-color-2">Contact Me</button>
+    <a href="Payal_Yadav_8799854518.pdf" download class="btn btn-color-1">Download CV</a>
+    <a href="#contact" class="btn btn-color-2">Contact Me</a>
   </div>
   <div id="socials-container" style="margin-top: 1.5rem;">
     <!-- your social icons stay the same -->
@@ -75,7 +75,7 @@
       <a href="https://github.com/payal-yadav23" target="_blank">
         <img src="github.png" alt="GitHub" class="icon" />
       </a>
-      <a href="https://instagram.com/_paayall_._17" target="_blank">
+      <a href="https://instagram.com/" target="_blank">
   <img src="instagram.png" alt="Instagram" class="icon"/>
 </a>
 <a href="mailto:payal.p.yadav45@gmail.com">
@@ -94,13 +94,28 @@
     </div>
     <div class="about-right animate-about-right">
       <p>
-        I have recently completed my Engineering from <strong>PVPIT College</strong>,
-        specialized in <strong>Electronics and Telecommunication (ENTC)</strong>,
-        with an overall GPA of <strong>9.32</strong>.
-      </p>
-      <p>
-        I am passionate about backend development using Java and databases like MySQL. I also enjoy crafting responsive websites with HTML, CSS, and JavaScript. I’m a fast learner and always eager to explore new technologies.
-      </p>
+  I have recently completed my Engineering from <strong>PVPIT College</strong>, specialized in
+  <strong>Electronics and Telecommunication (ENTC)</strong>, with an overall
+  <strong>GPA of 9.32</strong>.
+</p>
+<p>
+  I’m passionate about <strong>backend development</strong> using <strong>Java</strong> and databases like
+  <strong>MySQL</strong>, and I also enjoy crafting responsive and interactive websites using
+  <strong>HTML</strong>, <strong>CSS</strong>, and <strong>JavaScript</strong>.
+</p>
+<p>
+  In addition to my technical skills, I have experience working with <strong>JDBC</strong>,
+  <strong>Git</strong>, and development environments like <strong>Eclipse</strong>.
+</p>
+<p>
+  I’m a <strong>quick learner</strong>, enjoy solving <strong>real-world problems</strong>, and love exploring
+  new tools and technologies.
+</p>
+<p>
+  My goal is to grow as a <strong>Full-Stack Developer</strong>, contribute to impactful projects, and
+  be a valuable part of a <strong>dynamic development team</strong>.
+</p>
+
     </div>
   </div>
 </section>
@@ -204,11 +219,11 @@
     </div>
 
     <div class="project-card">
-      <img src="project2.png" alt="Project 2" />
-      <h3>Student Management System</h3>
-      <p>Java & MySQL based desktop app for managing student records.</p>
+      <img src="project2.avif" alt="Project 2" />
+      <h3>Digital Library Manager System</h3>
+      <p>Java & MySQL using JDBC(Modular Approach) managing books records.</p>
       <div class="btn-container">
-        <a href="https://github.com/yourusername/student-system" target="_blank" class="btn btn-color-2">GitHub</a>
+        <a href="https://github.com/payal-yadav23/Digital-Library-Manager" target="_blank" class="btn btn-color-2">GitHub</a>
         <a href="#" class="btn btn-color-1">Live Demo</a>
       </div>
     </div>
@@ -217,16 +232,21 @@
   </div>
 </section>
 
-
-  <!-- Contact -->
+<!--Contact Section-->
  <section id="contact">
   <h2 class="title">Contact Me</h2>
+
+  <!-- Message container -->
+  <div id="message-sent" class="message" style="display: none; color: green; text-align: center; font-weight: bold;">
+    ✅ Message Sent Successfully!
+  </div>
+
   <div class="contact-container">
     <div class="contact-left slide-left">
       <img src="profile-pic2.jpg" alt="Payal Yadav" class="contact-photo" />
     </div>
     <div class="contact-right slide-right">
-      <form class="contact-form">
+      <form class="contact-form" onsubmit="return showMessage(event)">
         <input type="text" placeholder="Full Name" required />
         <input type="email" placeholder="Email" required />
         <textarea placeholder="Your Message" rows="5" required></textarea>
@@ -235,6 +255,7 @@
     </div>
   </div>
 </section>
+
 
 
   <footer>
